@@ -1,16 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/Homepage';
-import SelectionPage from './pages/SelectionPage';
+import AppRouter from './pages/AppRouter';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/selection" element={<SelectionPage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+        <div className = "Navbar">
+          <a href = "http://localhost:3000"> Home</a>
+        <b>EmpaTherapy</b>
+      </div>
+      <AppRouter/>
+    </div>
   );
 }
 

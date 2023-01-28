@@ -44,3 +44,62 @@ header {
     padding: 20px;
     text-align: center;
   }
+
+  .banner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-color: black;
+  }
+
+  .banner .bannerText{
+    color: white;
+    z-index: 5;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: Century Gothic;
+}
+
+.banner .heroImage{
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+.banner .heroImage:nth-child(1) {
+  z-index: 4;
+  animation: fade 40s -0s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.bannner .heroImage:nth-child(2) {
+  z-index: 3;
+  animation: fade 40s -10s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.banner .heroImage:nth-child(3) {
+  z-index: 2;
+  animation: fade 40s -20s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.banner .heroImage:nth-child(4){
+  z-index: 1;
+  animation: fade 40s -30s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  17% {opacity: 1;}
+  25% {opacity: 0;}
+  92% {opacity: 0;}
+  100% {opacity: 1;}
+}

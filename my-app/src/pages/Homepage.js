@@ -1,42 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "firebase/database";
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import React from 'react';
+import './Homepage.css';
+
 const HomePage = () => {
-  const [therapists, setTherapists] = useState([]);
-
-  useEffect(() => {
-    const fetchTherapists = async () => {
-      const therapistsData = await firebase
-        .database()
-        .ref("/therapists")
-        .once("value");
-      setTherapists(therapistsData.val());
-    };
-    fetchTherapists();
-  }, []);
-
-  return (
-    <div>
-      <h1>Welcome to the Therapist Finder</h1>
-      <div>
-        {therapists.map((therapist) => (
-          <TherapistCard key={therapist.id} therapist={therapist} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const TherapistCard = ({ therapist }) => {
-  return (
-    <div>
-      <img src={therapist.image} alt={therapist.name} />
-      <h2>{therapist.name}</h2>
-      <p>{therapist.qualifications}</p>
-    </div>
-  );
-};
-
+    return (
+        <div className="homepage">
+            <h1>Welcome to EmpathTherapy</h1>
+            <p>Find a therapist who understands you</p>
+            <button>Start Swiping</button>
+        </div>
+    );
+}
 export default HomePage;

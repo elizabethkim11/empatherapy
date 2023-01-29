@@ -11,8 +11,9 @@ const HomePage = () => {
         <div className="Homepage">
             <div className="Banner">
             <span className="BannerText">
-                <h1>Welcome to EmpathTherapy</h1>
-                <p>Find a therapist who understands you</p>
+                <h2>welcome to</h2>
+                <h1>EmpaTherapy</h1>
+                <p>Find a therapist who understands you.</p>
                 <Link to="/selection">
                   <button>Get Started</button>
                 </Link>
